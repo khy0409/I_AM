@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/crops.css" />
+    <title>상품상세 크롭스</title>
+  </head>
+  <body>
+    <div>
+      <img src="../image/와우 ㅋㅋㅋ.jpg" alt="크록스" />
+      <p id="Crocs_id">#신발 #크롭스 #여자 #모델</p>
+      <p>
+        <strong id="Explanation_id"> 설명 :</strong> 크롭스 성인크록스신발
+        쪼리신발 캐릭터 <br />크록스신발 슬리퍼 비치슈즈 신발 아쿠아슈즈 JH1453
+      </p>
+      <p id="pp">가격: <strong>49,600원</strong></p>
+    </div>
+
+    <ul>
+      <li><button id="li" onclick="addToCart()">장바구니</button></li>
+      <li><button id="li_id">바로구매</button></li>
+    </ul>
+
+    <script>
+    function addToCart(){
+		if (confirm('상품이 장바구니에 추가되었습니다.\n장바구니로 이동하시겠습니까?')) {
+			addToCartcrops();
+			document.addForm.submit();
+		} else {
+			document.addForm.reset();
+		}
+	}
+      function addToCartcrops() {
+        const productId = "crops";
+
+        const productInfocrops = {
+          descriptiondescription: "크롭스",
+          description:
+            "크롭스 성인크록스신발 쪼리신발 캐릭터 크록스신발 <br /> 슬리퍼 비치슈즈 신발 아쿠아슈즈 JH1453",
+          clothesPrice: "49,600원",
+        };
+
+        // 고유한 상품 ID를 사용하여 localStorage에 저장
+        localStorage.setItem(
+          `productInfo_${productId}`,
+          JSON.stringify(productInfocrops)
+        );
+
+        window.location.href = "shoppingbasket.html";
+      }
+    </script>
+  </body>
+</html>

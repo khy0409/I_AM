@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="../css/shop.css" />
+<title>쇼핑몰</title>
+</head>
+<body>
+	<header>
+		<a href="login.jsp" target="_blank"><p>my page</p></a>
+		<div id="div">
+			<table id="table">
+				<tr>
+					<td><a href="#" onclick="navigateToCart()"> 
+					<img src="../image/장바구니니니니니니니.png" alt="장바구니" id="Basket" />
+					</a></td>
+				</tr>
+				<tr>
+					<th id="th"><a href="shoppingbasket.html"
+						target="_blank">장바구니</a></th>
+				</tr>
+				<tr>
+					<td><a href="../html/steamed.html" target="_blank"><img
+							src="../image/넌 내꺼야.png" alt="찜" id="Best" /></a></td>
+				</tr>
+				<tr>
+					<th><a href="../html/steamed.html" target="_blank">찜 목록</a></th>
+				</tr>
+			</table>
+		</div>
+	</header>
+	<main>
+		<div>
+			<form action="">
+				<input type="text" placeholder="검색하자" required id="intint" />
+			</form>
+		</div>
+		<img src="../image/이미지지지지지.png" id="Magnifier" />
+		<div class="main">
+			<table>
+				<tr>
+					<td><a href="../html/clothes.html" target="_blank"><img
+							src="../image/옷옷.jpg" alt="clothes" id="Clothes" /></a>
+					</td>
+					<td><a href="../html/Pants.html" target="_blank"><img
+							src="../image/바지지지지지.jpg" alt="Pants" id="Pants" /></a>
+					</td>
+					<td><a href="../html/shoes.html" target="_blank"><img
+							src="../image/신발발발발발발발.png" alt="Shoes" id="Shoes" /></a>
+					</td>
+					<td><a href="../html/populer.jsp" target="_blank"><img
+							src="../image/인기목록록록록록록록.png" alt="Hot" id="Hot" /></a>
+					</td>
+				</tr>
+				<tr>
+					<th><a href="../html/clothes.html" target="_blank">상의</a></th>
+					<th><a href="../html/Pants.html" target="_blank">하의</a></th>
+					<th><a href="../html/shoes.html" target="_blank">신발</a></th>
+					<th><a href="../html/HOT.html" target="_blank">Hot</a></th>
+				</tr>
+			</table>
+		</div>
+	</main>
+	<footer>
+		<span id="span"> <a href="../html/shop.html" target="_blank"
+			id="IAMIAM"><img src="../image/IAM.jpg" alt="IAM로고"
+				class="iam" /></a> <a href="../html/shop.html" target="_blank"><img
+				src="../image/IAM검정.jpg" alt="IAM로고" class="iam" /></a>
+		</span> <span> <a href="../html/shop.html" target="_blank"
+			id="IAMIAMIAM"><img src="../image/IAM검정.jpg"
+				alt="IAM로고" class="iam" /></a> <a href="../html/shop.html"
+			target="_blank" id="IAMIAMIAMIAM"><img
+				src="../image/IAM.jpg" alt="IAM로고" class="iam" /></a>
+		</span>
+	</footer>
+	<script src="../js/Shopping.js"></script>
+	 <script>
+    function navigateToCart() {
+        var login_check = '<%= request.getAttribute("login_check") %>';
+        if (login_check == 'true') {
+            // 로그인 상태이면 장바구니 페이지로 이동
+            window.location.href = "shoppingbasket.html";
+        } else {
+            // 로그인 상태가 아니면 로그인 페이지로 이동
+            window.location.href = "login.jsp";
+        }
+    }
+</script>
+</body>
+</html>

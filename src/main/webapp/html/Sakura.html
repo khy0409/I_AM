@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/Sakura.css" />
+    <title>상품상세 꾸라옷</title>
+  </head>
+  <body>
+    <div>
+      <img src="../image/사쿠라 짱임 입음.webp" alt="꾸라옷" />
+      <p id="momo">#상의 #르세리핌 #꾸 라 #일본인 #귀여움 #피어나</p>
+      <p>
+        <strong id="cowgirl"> 설명 :</strong> 카우걸 <br />
+        루즈니트 치어 스웨터 크림 / 네이비
+      </p>
+      <p id="expensive"><strong>₩610,000</strong></p>
+    </div>
+
+    <ul>
+      <li><button id="click" onclick="addToCart()">장바구니</button></li>
+      <li><button id="clickclick">바로구매</button></li>
+    </ul>
+    <script>
+    function addToCart(){
+		if (confirm('상품이 장바구니에 추가되었습니다.\n장바구니로 이동하시겠습니까?')) {
+			addToCartSakura();
+			document.addForm.submit();
+		} else {
+			document.addForm.reset();
+		}
+	}
+      function addToCartSakura() {
+        const productId = "Sakura";
+
+        const productInfoSakura = {
+          descriptiondescription: "[사쿠라가 입음] 카우걸",
+          description: "카우걸 <br/> 루즈니트 치어 스웨터 크림 / 네이비",
+          clothesPrice: "₩610,000",
+        };
+
+        // 고유한 상품 ID를 사용하여 localStorage에 저장
+        localStorage.setItem(
+          `productInfo_${productId}`,
+          JSON.stringify(productInfoSakura)
+        );
+
+        alert("상품이 장바구니에 추가되었습니다.");
+
+        window.location.href = "shoppingbasket.html";
+      }
+    </script>
+  </body>
+</html>

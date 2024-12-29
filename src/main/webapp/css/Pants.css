@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+body {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 700px 700px 500px;
+}
+#biglong {
+  margin-left: 100px;
+  margin-top: 100px;
+  width: 500px;
+  height: 605px;
+}
+#bigman {
+  margin-left: 241px;
+  margin-top: 100px;
+  color: #6e539f;
+  font-weight: bold;
+  font-size: 40px;
+}
+a {
+  text-decoration: none;
+}
+#longpants {
+  margin-left: 10px;
+  margin-top: 100px;
+  width: 500px;
+  height: 600px;
+}
+#Wide {
+  margin-left: 104px;
+  margin-top: 100px;
+  color: #6e539f;
+  font-weight: bold;
+  font-size: 40px;
+}
+#notuck {
+  margin-left: -90px;
+  margin-top: 100px;
+  width: 500px;
+  height: 600px;
+}
+#notucknotuck {
+  margin-left: 135px;
+  margin-top: 90px;
+  color: #6e539f;
+  font-weight: bold;
+  font-size: 40px;
+}

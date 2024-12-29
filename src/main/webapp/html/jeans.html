@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/jeans.css" />
+    <title>상품상세 청바지</title>
+  </head>
+  <body>
+    <div>
+      <img src="../image/남자 청바지.jpg" alt="청바지" />
+      <p id="jeans">#하의 #청바지 #남자 #모델</p>
+      <p>
+        <strong id="Fit"> 설명 :</strong> 이상적인 스트레이트 핏으로 떨어지는
+        데님 진입니다. <br />
+        어디에나 이지하게 연출 할 수 있는 팬츠로 군더더기 없는 디테일에 일자
+        핏으로 어디에나 매칭도 쉽습니다. <br />
+        데일리하게 즐기시기 좋으며, 4계절 내내 다양한 코디에 기본적으로
+        스타일링하기 좋습니다.
+      </p>
+      <p id="manjeabs">가격: <strong>38,000원</strong></p>
+    </div>
+
+    <ul>
+      <li>
+        <button id="shoppingbasket_id" onclick="addToCart()">
+          장바구니
+        </button>
+      </li>
+      <li><button id="Rightnow_id">바로구매</button></li>
+    </ul>
+    <script>
+    function addToCart(){
+		if (confirm('상품이 장바구니에 추가되었습니다.\n장바구니로 이동하시겠습니까?')) {
+			addToCartjeans();
+			document.addForm.submit();
+		} else {
+			document.addForm.reset();
+		}
+	}
+      function addToCartjeans() {
+        const productId = "jeans";
+
+        const productInfojeans = {
+          descriptiondescription: "청바지",
+          description:
+            "이상적인 스트레이트 핏으로 떨어지는데님 진입니다. <br/> 데일리하게 즐기시기 좋으며, 4계절 내내 <br/> 다양한 코디에 기본적으로 스타일링하기 좋습니다.",
+          clothesPrice: "38,000원",
+        };
+
+        // 고유한 상품 ID를 사용하여 localStorage에 저장
+        localStorage.setItem(
+          `productInfo_${productId}`,
+          JSON.stringify(productInfojeans)
+        );
+
+        alert("상품이 장바구니에 추가되었습니다.");
+
+        window.location.href = "shoppingbasket.html";
+      }
+    </script>
+  </body>
+</html>

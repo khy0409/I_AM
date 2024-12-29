@@ -1,0 +1,60 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+body {
+  height: 100vh;
+}
+img {
+  margin-top: 30px;
+  width: 550px;
+  height: 550px;
+}
+div {
+  text-align: center;
+}
+p {
+  font-weight: 700;
+  margin-top: 30px;
+  font-size: 21px;
+}
+#Crocs_id {
+  font-size: 17px;
+  color: #6e539f;
+  margin-top: 5px;
+}
+ul {
+  display: flex;
+  left: 1000px;
+  top: 880px;
+  position: absolute;
+  list-style-type: none;
+  text-align: center;
+}
+button {
+  font-weight: bold;
+  font-size: 20px;
+  width: 200px;
+  height: 60px;
+}
+#li {
+  cursor: pointer;
+  background-color: white;
+  border: 2px solid #a0a0a0;
+}
+#li_id {
+  cursor: pointer;
+  margin-left: 10px;
+  border: none;
+  background-color: #ff8c00;
+  color: white;
+}
+#pp {
+  margin-left: 400px;
+  margin-top: 60px;
+  color: #6e539f;
+  font-size: 40px;
+}
+#Explanation_id {
+  color: #696969;
+}

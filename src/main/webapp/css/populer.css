@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  text-align: center;
+}
+
+#Eunchae, #Dress, #Sakura, #jeans, #pants, #notuck, #crops, #height, #boots {
+  margin-top: 100px;
+  width: 500px;
+  height: 600px;
+}
+
+
+#loveEunchae, #KazuhaDress, #loveSakura, #lovejeans, #lovepants, #lovenotuck, #lovecrops, #loveheight, #loveboots {
+  margin-top: 70px;
+  color: #6e539f;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+#Dress {
+  margin-left: 10px;
+}
+a{
+   text-decoration: none;
+}

@@ -1,0 +1,20 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: #beabe1;
+  font-size: 30px;
+}
+a:hover {
+  color: #6e539f;
+}
+#login {
+  text-align: center;
+  margin-top: 400px;
+}
+#register {
+  text-align: center;
+  margin-top: 20px;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/notuck.css" />
+    <title>상품상세 노턱</title>
+  </head>
+  <body>
+    <div>
+      <img src="../image/남자 바지지지.jpg" alt="노턱" />
+      <p id="tuck">#하의 #노턱 #남자 #모델</p>
+      <p>
+        <strong id="front"> 설명 :</strong> - 플랫 프론트(Flat front) 또는 노
+        플리츠(No pleats)로 부르기도 함. <br />
+        <span id="Waist">- 허리 아랫쪽 주름이 없는 형태의 바지.</span> <br />
+        <span id="stick"
+          >- 몸에 밀착 되어, 슬림하고 깔끔한 연출 가능, 단, 여유분이 없어
+          불편함을 느낄 수 있음.</span
+        >
+      </p>
+      <p id="man">가격: <strong>42,200원</strong></p>
+    </div>
+
+    <ul>
+      <li><button id="Event" onclick="addToCart()">장바구니</button></li>
+      <li><button id="EventEvent">바로구매</button></li>
+    </ul>
+    <script>
+    function addToCart(){
+		if (confirm('상품이 장바구니에 추가되었습니다.\n장바구니로 이동하시겠습니까?')) {
+			addToCartnotuck();
+			document.addForm.submit();
+		} else {
+			document.addForm.reset();
+		}
+	}
+      function addToCartnotuck() {
+        const productId = "notuck";
+
+        const productInfonotuck = {
+          descriptiondescription: "노턱",
+          description:
+            "- 플랫 프론트(Flat front) 또는 노플리츠(No pleats)로 부르기도 함. <br/> - 허리 아랫쪽 주름이 없는 형태의 바지. <br/> - 몸에 밀착 되어, 슬림하고 깔끔한 연출 가능, 단, 여유분이 없어 불편함을 느낄 수 있음.",
+          clothesPrice: "42,200원",
+        };
+
+        // 고유한 상품 ID를 사용하여 localStorage에 저장
+        localStorage.setItem(
+          `productInfo_${productId}`,
+          JSON.stringify(productInfonotuck)
+        );
+
+        alert("상품이 장바구니에 추가되었습니다.");
+
+        window.location.href = "shoppingbasket.html";
+      }
+    </script>
+  </body>
+</html>

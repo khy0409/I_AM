@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/Eunchae.css" />
+    <title>상품상세 은채옷</title>
+  </head>
+  <body>
+    <div>
+      <img src="../image/은채옷옷옷옷.jpg" alt="은채옷" />
+      <p id="EunchaeTOP">
+        #상의 #후드티 #르세라핌 #은채 #귀여움 #나도살꺼임 #피어나
+      </p>
+      <p>
+        <strong id="Explanation"> 설명 :</strong> 전체적으로 여유 있는 박지 핏의
+        실루엣
+        <br />
+        원단 수축률 최소화를 위해 텐타 공정 및 덤블 워성 <br />도톰하고 부드러운
+        소프트 기모 쭈리 원단으로 제작 <br />
+        더블립 스판사를 이용하여 늘어남을 최소화
+      </p>
+
+      <p id="Price">가격: <strong>79,000원</strong></p>
+    </div>
+
+    <ul>
+      <li>
+        <button id="shoppingbasket" onclick="addToCart()">
+          장바구니
+        </button>
+      </li>
+      <li><button id="Rightnow">바로구매</button></li>
+    </ul>
+    <script>
+    function addToCart(){
+		if (confirm('상품이 장바구니에 추가되었습니다.\n장바구니로 이동하시겠습니까?')) {
+			addToCartEunchae();
+			document.addForm.submit();
+		} else {
+			document.addForm.reset();
+		}
+	}
+      function addToCartEunchae() {
+        const productId = "Eunchae";
+
+        const productInfoEunchae = {
+          descriptiondescription: "[은채가 입음] 후드티",
+          description:
+            "전체적으로 여유 있는 박지 핏의 실루엣 단 수축률 최소화를 <br/> 위해 텐타 공정 및 덤블 워성 도톰하고 부드러운 <br/> 소프트 기모 쭈리 원단으로 제작 더블립 <br/> 스판사를 이용하여 늘어남을 최소화",
+          clothesPrice: "79,000원",
+        };
+
+        // 고유한 상품 ID를 사용하여 localStorage에 저장
+        localStorage.setItem(
+          `productInfo_${productId}`,
+          JSON.stringify(productInfoEunchae)
+        );
+
+        window.location.href = "shoppingbasket.html";
+      }
+    </script>
+  </body>
+</html>

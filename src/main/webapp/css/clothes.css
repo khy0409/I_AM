@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+body {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 700px 700px 500px;
+}
+#Eunchae {
+  margin-left: 100px;
+  margin-top: 88px;
+  width: 500px;
+  height: 598px;
+}
+#HongEunchae {
+  margin-left: 190px;
+  margin-top: 100px;
+  color: #6e539f;
+  font-weight: bold;
+  font-size: 40px;
+}
+a {
+  text-decoration: none;
+}
+#Sakura {
+  margin-left: 10px;
+  margin-top: 87px;
+  width: 500px;
+  height: 600px;
+}
+#Miyawaki {
+  margin-left: 110px;
+  margin-top: 100px;
+  color: #6e539f;
+  font-weight: bold;
+  font-size: 40px;
+}
+#Kazuha {
+  margin-left: -90px;
+  margin-top: 87px;
+  width: 500px;
+  height: 600px;
+}
+#Nakamura {
+  margin-left: 80px;
+  margin-top: 90px;
+  color: #6e539f;
+  font-weight: bold;
+  font-size: 40px;
+}

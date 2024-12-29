@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/height.css" />
+    <title>상품상세 키높이가능</title>
+  </head>
+  <body>
+    <div>
+      <img src="../image/운동화화화화화.jpg" alt="키높이가능" />
+      <p id="Modelname">#신발 #키높이가능 #여자 #모델</p>
+      <p>
+        <strong id="Height"> 설명 :</strong> 발편한 여자 여성 키높이 운동화 쿠션
+        <br />슬립온 3~5cm 스니커즈 통굽 빅사이즈 신발 런닝화 태슬 로퍼
+      </p>
+      <p id="pppp">가격: <strong>37,400원</strong></p>
+    </div>
+
+    <ul>
+      <li><button id="Button" onclick="addToCart()">장바구니</button></li>
+      <li><button id="ButtonButton">바로구매</button></li>
+    </ul>
+    <script>
+    function addToCart(){
+		if (confirm('상품이 장바구니에 추가되었습니다.\n장바구니로 이동하시겠습니까?')) {
+			addToCartheight();
+			document.addForm.submit();
+		} else {
+			document.addForm.reset();
+		}
+	}
+      function addToCartheight() {
+        const productId = "height";
+
+        const productInfoheight = {
+          descriptiondescription: "운동화",
+          description:
+            "편한 여자 여성 키높이 운동화 쿠션 슬립온 3~5cm <br/> 스니커즈 통굽 빅사이즈 신발 런닝화 태슬 로퍼",
+          clothesPrice: "37,400원",
+        };
+
+        // 고유한 상품 ID를 사용하여 localStorage에 저장
+        localStorage.setItem(
+          `productInfo_${productId}`,
+          JSON.stringify(productInfoheight)
+        );
+
+        alert("상품이 장바구니에 추가되었습니다.");
+
+        window.location.href = "shoppingbasket.html";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/boots.css" />
+    <title>상품상세 장화</title>
+  </head>
+  <body>
+    <div>
+      <img src="../image/장화화화화화화화화.jpg" alt="장화" />
+      <p id="Boots">#신발 #장화 #여자 #모델</p>
+      <p>
+        <strong id="Waterproof"> 설명 :</strong> 첼시레인부츠 여성 장화 미들
+        <br />여자레인부츠 방수 장마 신발
+      </p>
+      <p id="p_id">가격: <strong>56,200원</strong></p>
+    </div>
+
+    <ul>
+      <!-- 장바구니 버튼 클릭 시 정보를 localStorage에 저장 -->
+      <li><button id="ul" onclick= "addToCart()">장바구니</button></li>
+      <li><button id="ul_id">바로구매</button></li>
+    </ul>
+
+    <script>
+	function addToCart(){
+		if (confirm('상품이 장바구니에 추가되었습니다.\n장바구니로 이동하시겠습니까?')) {
+			addToCartboots();
+			document.addForm.submit();
+		} else {
+			document.addForm.reset();
+		}
+	}
+      function addToCartboots() {
+        const productId = "boots"; // 상품 식별자, 여기서는 "boots"로 설정
+
+        const productInfoboots = {
+          descriptiondescription: "장화",
+          description:
+            "첼시레인부츠 여성 장화 미들 여자레인부츠 방수 장마 신발",
+          clothesPrice: "56,200원",
+        };
+
+        // 고유한 상품 ID를 사용하여 localStorage에 저장
+        localStorage.setItem(
+          `productInfo_${productId}`,
+          JSON.stringify(productInfoboots)
+        );
+
+        window.location.href = "shoppingbasket.html";
+      }
+    </script>
+  </body>
+</html>

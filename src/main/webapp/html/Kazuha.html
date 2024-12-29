@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/Kazuha.css" />
+    <title>상품상세 즈하옷</title>
+  </head>
+  <body>
+    <div>
+      <img src="../image/즈하짱 옷옷옷옷.jpg" alt="즈하옷" />
+      <img src="../image/가죽 벨트.webp" alt="벨트" />
+      <p id="belt">
+        #상의 #드레스 #르세라핌 #즈 하 #귀여움 #여 신 #일본인 #발레15년 # 벨트
+      </p>
+      <p>
+        <strong id="clothes"> 설명 :</strong>
+        카즈하와 설현이 입은 의상은 패션 브랜드
+        <strong id="alexander"> '알렉산더 맥퀸'(Alexander McQueen)</strong>
+        의 2022 가을·겨울 프리 컬렉션 제품이다.
+        <br />
+        카즈하와 설현이 착용한 의상은 면 소재로 제작된 셔츠 드레스다. 과감하게
+        젖혀진 듯한 플랩 숄더 디자인과 코르셋 디테일이 멋스러운 제품으로, 가격은
+        333만원이다.
+        <br />
+        함께 매치한 더블 벨트는 송아지 가죽으로 제작됐으며, 가격은
+        94만5000원이다.
+      </p>
+      <p class="clothesPrice">
+        가격:
+        <strong>3,330,000원</strong>
+      </p>
+      <p id="beltPrice">
+        벨트 가격 :
+        <strong>945,000원</strong>
+      </p>
+
+      <ul>
+        <li>
+          <button id="Button" onclick="addToCart()">장바구니</button>
+        </li>
+        <li><button id="ButtonButton">바로구매</button></li>
+      </ul>
+    </div>
+
+    <script>
+    function addToCart(){
+		if (confirm('상품이 장바구니에 추가되었습니다.\n장바구니로 이동하시겠습니까?')) {
+			addToCartKazuha();
+			document.addForm.submit();
+		} else {
+			document.addForm.reset();
+		}
+	}
+      function addToCartKazuha() {
+        const productId = "Kazuha"; // 상품 식별자, 여기서는 "Kazuha"로 설정
+
+        const productInfoKazuha = {
+          descriptiondescription: "[카즈하가 입음]드레스,벨트",
+          description:
+            "카즈하와 설현이 착용한 의상은 면 <br /> 소재로 제작된 셔츠 드레스다.<br/> 가격은 333만원이다.",
+          clothesPrice: "3,330,000원",
+          beltDescription:
+            "더블 벨트는 송아지 가죽으로 제작됐으며, <br /> 가격은 94만5000원이다.",
+          beltPrice: "945,000원",
+        };
+
+        // 고유한 상품 ID를 사용하여 localStorage에 저장
+        localStorage.setItem(
+          `productInfo_${productId}`,
+          JSON.stringify(productInfoKazuha)
+        );
+
+        alert("상품이 장바구니에 추가되었습니다.");
+
+        window.location.href = "shoppingbasket.html";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/shoppingbasket.css" />
+    <title>장바구니</title>
+  </head>
+  <body>
+    <a id="back" href="../html/shop.html" target="_blank"
+      ><h1>장바구니 나가기</h1></a
+    >
+    <div id="cart-items">
+      <!-- 장바구니에 담긴 상품 목록 표시 -->
+    </div>
+    <script>
+      // localStorage에 저장된 모든 상품 정보 가져오기
+      const productInfos = Object.keys(localStorage)
+        .filter((key) => key.startsWith("productInfo_"))
+        .map((key) => {
+          const productInfo = JSON.parse(localStorage.getItem(key));
+          // 각 상품에 고유한 productId 속성 추가
+          productInfo.productId = key.replace("productInfo_", "");
+          return productInfo;
+        });
+
+      // 장바구니에 담긴 모든 상품 정보를 화면에 표시
+      const cartItems = document.getElementById("cart-items");
+
+      function removeFromCart(productId) {
+        // localStorage에서 상품 정보 제거
+        localStorage.removeItem(`productInfo_${productId}`);
+
+        // 장바구니 화면 갱신
+        refreshCart();
+      }
+
+      function refreshCart() {
+        cartItems.innerHTML = "";
+
+        // 모든 상품 정보를 다시 가져오기
+        const productInfos = Object.keys(localStorage)
+          .filter((key) => key.startsWith("productInfo_"))
+          .map((key) => {
+            const productInfo = JSON.parse(localStorage.getItem(key));
+            // 각 상품에 고유한 productId 속성 추가
+            productInfo.productId = key.replace("productInfo_", "");
+            return productInfo;
+          });
+
+        if (productInfos.length > 0) {
+          productInfos.forEach((productInfo) => {
+            const productElement = document.createElement("div");
+            productElement.innerHTML = `
+                <p id="Price_0">${productInfo.descriptiondescription}</p>
+                <p>${productInfo.description}</p>
+                <p id="Price_1">${productInfo.clothesPrice}</p>
+                <p>${productInfo.beltDescription}</p>
+                <p id="Price_2">${productInfo.beltPrice}</p>
+                <button onclick="removeFromCart('${productInfo.productId}')">상품 제거</button>
+              `;
+
+            cartItems.appendChild(productElement);
+          });
+        } else {
+          cartItems.innerHTML = "<p>장바구니에 상품이 없습니다.</p>";
+        }
+      }
+
+      // 초기 장바구니 화면 설정
+      refreshCart();
+    </script>
+    <button id="button_1" onclick="purchase()">바로구매</button>
+
+    <script>
+      // 상품 추가 횟수를 세기 위한 변수
+      let itemCount = 0;
+
+      function removeFromCart(productId) {
+        // localStorage에서 상품 정보 제거
+        localStorage.removeItem(`productInfo_${productId}`);
+
+        // 상품 제거 후 상품 개수 갱신
+        itemCount--;
+
+        // 장바구니 화면 갱신
+        refreshCart();
+      }
+
+      function refreshCart() {
+        cartItems.innerHTML = "";
+
+        // 모든 상품 정보를 다시 가져오기
+        const productInfos = Object.keys(localStorage)
+          .filter((key) => key.startsWith("productInfo_"))
+          .map((key) => {
+            const productInfo = JSON.parse(localStorage.getItem(key));
+            // 각 상품에 고유한 productId 속성 추가
+            productInfo.productId = key.replace("productInfo_", "");
+            return productInfo;
+          });
+
+        if (productInfos.length > 0) {
+          productInfos.forEach((productInfo) => {
+            const productElement = document.createElement("div");
+            productElement.innerHTML = `
+                <p id="Price_0">${productInfo.descriptiondescription}</p>
+                <p>${productInfo.description}</p>
+                <p id="Price_1">${productInfo.clothesPrice}</p>
+                <p>${productInfo.beltDescription}</p>
+                <p id="Price_2">${productInfo.beltPrice}</p>
+                <button onclick="removeFromCart('${productInfo.productId}')">상품 제거</button>
+              `;
+
+            cartItems.appendChild(productElement);
+          });
+        } else {
+          cartItems.innerHTML = "<p>장바구니에 상품이 없습니다.</p>";
+        }
+      }
+
+      // 초기 장바구니 화면 설정
+      refreshCart();
+
+      // 청바지를 장바구니에 추가하는 함수
+      function addToCartJeans() {
+        const productId = "jeans";
+
+        // 상품 개수가 3개 미만인 경우에만 상품을 추가
+        if (itemCount < 3) {
+          const productInfoJeans = {
+            description: "이상적인 스트레이트 핏으로 떨어지는",
+            clothesPrice: "38,000원",
+          };
+
+          // 고유한 상품 ID를 사용하여 localStorage에 저장
+          localStorage.setItem(
+            `productInfo_${productId}`,
+            JSON.stringify(productInfoJeans)
+          );
+
+          // 상품 추가 후 상품 개수 갱신
+          itemCount++;
+
+          alert("상품이 장바구니에 추가되었습니다.");
+        }
+      }
+      // 장바구니 화면 갱신
+      refreshCart();
+
+      // 바로구매를 처리하는 함수
+      function purchase() {
+        // localStorage에서 모든 상품 정보 제거
+        Object.keys(localStorage)
+          .filter((key) => key.startsWith("productInfo_"))
+          .forEach((key) => {
+            localStorage.removeItem(key);
+          });
+
+        // "구매되었습니다" 메시지 표시
+        alert("구매되었습니다.");
+
+        // shop.html로 이동
+        window.location.href = "../html/shop.html";
+      }
+    </script>
+  </body>
+</html>

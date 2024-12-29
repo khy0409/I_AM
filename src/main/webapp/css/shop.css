@@ -1,0 +1,116 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+body {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1000px 1fr;
+}
+header {
+  background-color: #e2e2e2;
+}
+p {
+  margin-top: 50px;
+  font-weight: bold;
+  font-size: 40px;
+  color: #6e539f;
+  text-align: center;
+}
+#Basket {
+  width: 200px;
+  height: 170px;
+}
+#Best {
+  width: 200px;
+  height: 170px;
+}
+#div {
+  margin-top: 50px;
+}
+#th {
+  padding-bottom: 30px;
+}
+main {
+  background-color: #e2e2e2;
+}
+input {
+  width: 800px;
+  height: 50px;
+  margin-top: 15px;
+  background-color: #c8c8c8;
+  border: none;
+  border-radius: 10px;
+}
+input::placeholder {
+  font-size: 17px;
+  padding-left: 10px;
+  color: black;
+}
+#Magnifier {
+  width: 35px;
+  height: 35px;
+  position: fixed;
+  left: 1320px;
+  top: 22px;
+  cursor: pointer;
+}
+div {
+  display: flex;
+  justify-content: center;
+  border-radius: 50px;
+  padding-bottom: 10px;
+}
+th {
+  font-size: 18px;
+}
+#Clothes {
+  width: 190px;
+  height: 150px;
+}
+#Pants {
+  width: 190px;
+  height: 150px;
+}
+#Shoes {
+  width: 190px;
+  height: 150px;
+}
+#Hot {
+  width: 190px;
+  height: 150px;
+}
+.main {
+  background-color: white;
+  text-align: center;
+  width: 900px;
+  height: 300px;
+  margin: 60px;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+footer {
+  background-color: #e2e2e2;
+}
+.iam {
+  width: 160px;
+  height: 160px;
+}
+span {
+  display: flex;
+}
+#span {
+  margin-top: 70px;
+}
+#IAMIAM {
+  margin-left: 70px;
+}
+#IAMIAMIAM {
+  margin-top: -5px;
+  margin-left: 70px;
+}
+#IAMIAMIAMIAM {
+  margin-top: -5px;
+}

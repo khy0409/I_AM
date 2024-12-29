@@ -1,0 +1,69 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+body {
+  height: 100vh;
+}
+h1 {
+  margin-top: 24px;
+  margin-left: 40px;
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: #beabe1;
+}
+a {
+  text-decoration: none;
+}
+p {
+  color: #6e539f;
+  font-size: 27px;
+  margin-left: 40px;
+}
+button {
+  margin-left: 40px;
+  margin-top: 20px;
+  margin-bottom: 16px;
+  width: 200px;
+  height: 50px;
+  font-size: 23px;
+  border: none;
+  color: white;
+  background-color: #ff8c00;
+  cursor: pointer;
+}
+#Price_0 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: brown;
+  font-weight: bold;
+}
+
+#Price_1 {
+  margin-bottom: 25px;
+  font-size: 35px;
+  color: blue;
+  font-weight: bold;
+}
+#Price_2 {
+  font-size: 35px;
+  color: blue;
+  font-weight: bold;
+}
+#cart-items {
+  display: grid;
+  grid-template-columns: 700px 640px 500px;
+}
+#div_1 {
+  display: grid;
+  grid-template-columns: 700px 700px 500px;
+}
+#button_1 {
+  height: 65px;
+  width: 280px;
+  position: fixed;
+  bottom: 0;
+  font-size: 35px;
+  margin-left: 1610px;
+  margin-bottom: 20px;
+}
