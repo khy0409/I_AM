@@ -1,4 +1,4 @@
-<img src="https://capsule-render.vercel.app/api?type=waving&color=BDBDC8&height=150&section=header" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=BDBDC8&height=150&section=header" width = "100%"/>
 
 # 쇼핑몰 팀 프로젝트 [I_AM]
 
@@ -36,4 +36,4 @@
 ![Buy](https://github.com/user-attachments/assets/8f66c9f4-0640-4080-9518-b94c2b76a419)
 
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=BDBDC8&height=150&section=footer" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=BDBDC8&height=150&section=footer" width = "100%"/>
